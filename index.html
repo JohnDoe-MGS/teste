@@ -1,129 +1,1024 @@
-{
-  "company_info": {
-    "name": "COMPANHIA DE DESENVOLVIMENTO ECONOMICO DE GOIAS-CODEGO",
-    "cnpj": "01.285.170/0001-22",
-    "period": "01/01/2024 A 31/12/2024"
-  },
-  "balance_sheet": {
-    "assets": {
-      "current_assets": {
-        "cash_and_equivalents": 55786378.57,
-        "accounts_receivable": 3601184.5,
-        "other_current_assets": 95122.76,
-        "total_current_assets": 59482685.83
-      },
-      "non_current_assets": {
-        "long_term_assets": 101111493.55,
-        "water_sewage_infrastructure": {
-          "gross_value": 32348071.63,
-          "accumulated_depreciation": -32344398.55,
-          "net_value": 3673.079999998212
-        },
-        "total_non_current_assets": 101115166.63
-      },
-      "total_assets": 192847128.25
-    },
-    "liabilities": {
-      "current_liabilities": {
-        "customer_advances": 49631.94,
-        "other_current_liabilities": 0,
-        "total_current_liabilities": 49631.94
-      },
-      "non_current_liabilities": {
-        "estimated_long_term_debt": 38655127.75999999,
-        "total_non_current_liabilities": 38655127.75999999
-      },
-      "total_liabilities": 38704759.69999999
-    },
-    "equity": {
-      "capital_social": 420447038.1,
-      "capital_a_integralizar": -579552961.9,
-      "accumulated_losses": -266304669.55,
-      "total_equity": 154142368.55
-    }
-  },
-  "income_statement": {
-    "revenue": {
-      "water_services": {
-        "service_sales": 13695171.23,
-        "sales_to_record": 6734533.52,
-        "total_water_revenue": 20429704.75
-      },
-      "other_revenue": {
-        "land_sales": 25989.35,
-        "total_other_revenue": 25989.35
-      },
-      "total_revenue": 20455694.1
-    },
-    "expenses": {
-      "operating_expenses": {
-        "total_opex": 95122.76,
-        "estimated_water_opex": 66585.93199999999
-      },
-      "depreciation": {
-        "water_sewage_depreciation": 32344398.55,
-        "total_depreciation": 0
-      },
-      "taxes": {
-        "pis": 76003.94,
-        "cofins": 324664.37,
-        "total_pis_cofins": 400668.31
-      }
-    }
-  },
-  "water_sewage_operations": {
-    "infrastructure": {
-      "water_supply_system": {
-        "gross_value": 32348071.63,
-        "accumulated_depreciation": -32344398.55,
-        "net_book_value": 3673.079999998212
-      },
-      "total_infrastructure_net": 3673.079999998212
-    },
-    "operations": {
-      "water_volume_provided_m3": 6241307,
-      "revenue_per_m3": 3.273305535202803,
-      "opex_per_m3": 0.010668587845462495
-    },
-    "receivables": {
-      "saneago": 1428394.47,
-      "jaragua": 544271.69,
-      "sao_miguel_araguaia": 18000.0,
-      "customer_advances": 49631.94
-    }
-  },
-  "regulatory_calculations": {
-    "wacc": {
-      "debt_ratio": 0.20070176855226252,
-      "equity_ratio": 0.7992982314477375,
-      "cost_of_debt": 0.12,
-      "cost_of_equity": 0.15,
-      "tax_rate": 0.34,
-      "wacc": 0.1357903147864998
-    },
-    "regulatory_asset_base": {
-      "water_sewage_assets_gross": 32348071.63,
-      "accumulated_depreciation": 32344398.55,
-      "net_regulatory_base": 3673.079999998212,
-      "percentage_of_total_assets": 1.904658904350686e-05
-    },
-    "opex": {
-      "total_operating_expenses": 95122.76,
-      "estimated_water_opex": 66585.93199999999,
-      "water_opex_percentage": 0.7
-    },
-    "taxes": {
-      "pis_rate": 0.0165,
-      "cofins_rate": 0.076,
-      "total_pis_cofins": 400668.31
-    }
-  },
-  "tariff_calculation_inputs": {
-    "water_volume_m3": 6241307,
-    "net_regulatory_base": 3673.079999998212,
-    "annual_depreciation": 32344398.55,
-    "water_opex": 66585.93199999999,
-    "pis_cofins": 400668.31,
-    "wacc_to_calculate": 0.1357903147864998
-  }
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário de Avaliação dos Controles Internos (QACI)</title>
+    <style>
+        /* * Estilização moderna baseada nos prompts padrões.
+         * Paleta de cores profissional (azul, cinza) para harmonizar com o logo.
+         * Foco em tipografia limpa, cards e componentes modernos.
+         */
+        :root {
+            /* Paleta de Cores Moderna */
+            --color-component-1: #eef2ff; /* Ambiente de Controle (Indigo) */
+            --color-component-2: #e0f2fe; /* Avaliação de Riscos (Sky Blue) */
+            --color-component-3: #e0f7fa; /* Atividades de Controle (Cyan) */
+            --color-component-4: #fef3c7; /* Informação e Comunicação (Amber) */
+            --color-component-5: #f3e8ff; /* Monitoramento (Purple) */
+            
+            --color-border: #e4e7eb; /* Borda suave (Cinza) */
+            --color-text-primary: #1a202c; /* Texto principal (Carvão) */
+            --color-text-secondary: #4a5568; /* Texto secundário (Cinza) */
+            --color-background: #f7f8fa; /* Fundo da página (Cinza muito claro) */
+            --color-card-bg: #ffffff; /* Fundo dos cards (Branco) */
+            --color-accent: #3b82f6; /* Destaque (Azul) */
+            --color-accent-hover: #2563eb; /* Destaque (Azul mais escuro) */
+
+            --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family-sans);
+            line-height: 1.6;
+            color: var(--color-text-primary);
+            background-color: var(--color-background);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--color-card-bg);
+            border: 1px solid var(--color-border);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Sombra mais suave */
+            padding: 20px 30px;
+            border-radius: 8px; /* Cantos arredondados */
+        }
+
+        /* --- Cabeçalho com Logo --- */
+        .page-header {
+            display: flex;
+            flex-wrap: wrap; 
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid var(--color-border); /* Borda mais fina */
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+            /* Fundo do cabeçalho branco, para o novo logo */
+            background-color: var(--color-card-bg); 
+            padding-top: 15px; /* Ajusta o padding superior */
+        }
+        
+        /* Estilo para a imagem do logo no cabeçalho */
+        .page-logo-img {
+            max-height: 60px; /* Altura máxima para o logo */
+            width: auto; /* Largura automática para manter proporção */
+            object-fit: contain; /* Garante que o logo caiba sem distorcer */
+            
+            /* --- REMOVIDO: CORREÇÃO DE CONTRASTE ANTERIOR --- */
+            /* O logo atual já tem fundo escuro, então não precisamos de um fundo para ele. */
+            /* background-color: var(--color-text-secondary); */ 
+            /* padding: 5px; */
+            /* border-radius: 4px; */
+            /* --- FIM DA REMOÇÃO --- */
+        }
+
+        .page-header h1 {
+            flex: 1; 
+            min-width: 250px; 
+            font-size: 1.5em;
+            color: var(--color-text-primary);
+            text-align: left;
+            margin: 0; 
+            font-weight: 600; /* Tipografia mais moderna */
+        }
+        /* --- Fim do Cabeçalho --- */
+
+        /* --- Formulário de Identificação --- */
+        .header-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            background-color: #fcfdff; /* Fundo muito leve */
+        }
+        
+        .header-form div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-form label {
+            font-weight: 500; /* Peso médio */
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            color: var(--color-text-secondary);
+        }
+
+        .header-form input[type="text"] {
+            padding: 10px; /* Mais espaço interno */
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            font-size: 1em;
+            background-color: var(--color-card-bg);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .header-form input[type="text"]:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); /* Sombra de foco */
+        }
+
+        /* --- Cabeçalho do Componente --- */
+        .component-header {
+            padding: 15px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            border: 1px solid var(--color-border);
+            border-radius: 6px 6px 0 0; /* Arredondado em cima */
+            border-bottom: none;
+        }
+
+        .component-header h2 {
+            margin: 0 0 5px 0;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        .component-header p {
+            margin: 0;
+            font-style: italic;
+            font-size: 0.9em;
+            color: var(--color-text-secondary);
+        }
+
+        /* Cores dos componentes (usam as variáveis do :root) */
+        #comp1 { background-color: var(--color-component-1); }
+        #comp2 { background-color: var(--color-component-2); }
+        #comp3 { background-color: var(--color-component-3); }
+        #comp4 { background-color: var(--color-component-4); }
+        #comp5 { background-color: var(--color-component-5); }
+
+        .principle-header {
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            background-color: #f8fafc;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            color: var(--color-text-primary);
+        }
+
+        /* --- Acordeão Modernizado --- */
+        details {
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            margin-bottom: 8px;
+            overflow: hidden;
+            background-color: var(--color-card-bg);
+        }
+
+        summary {
+            padding: 15px; /* Padding uniforme */
+            cursor: pointer;
+            font-weight: 500;
+            list-style: none; /* Remove a seta padrão */
+            position: relative;
+            transition: background-color 0.2s;
+        }
+        
+        summary:hover {
+            background-color: #f8fafc;
+        }
+
+        summary::-webkit-details-marker {
+            display: none; /* Chrome */
+        }
+
+        /* Ícone de Chevron (seta) */
+        summary::after {
+            content: '▼';
+            font-size: 0.7em;
+            color: var(--color-text-secondary);
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%) rotate(0deg);
+            transition: transform 0.2s ease;
+        }
+
+        details[open] > summary::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        details[open] > summary {
+            background-color: #f8fafc;
+            border-bottom: 1px solid var(--color-border);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03) inset;
+        }
+
+        .accordion-panel {
+            padding: 20px;
+            background-color: #fafbfe; /* Fundo levemente azulado */
+            border-top: 1px solid var(--color-border);
+        }
+
+        .accordion-panel label {
+            display: block;
+            font-weight: 500;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: var(--color-text-secondary);
+        }
+
+        .accordion-panel select,
+        .accordion-panel textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            box-sizing: border-box; 
+            font-family: var(--font-family-sans);
+            font-size: 1em;
+            background-color: var(--color-card-bg);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        
+        .accordion-panel select:focus,
+        .accordion-panel textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        }
+
+        .accordion-panel textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        /* --- Seção da Tabela-Resumo --- */
+        .summary-section {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--color-border);
+        }
+        .summary-section h2 {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        #summary-table {
+            width: 100%;
+            border-collapse: separate; /* Permite border-radius */
+            border-spacing: 0;
+            margin-top: 20px;
+            font-size: 0.9em;
+            table-layout: fixed; 
+            border: 1px solid var(--color-border);
+            border-radius: 6px; /* Arredonda a tabela */
+            overflow: hidden; /* Garante que o fundo arredonde */
+        }
+        #summary-table th, #summary-table td {
+            padding: 12px; /* Mais espaço */
+            text-align: left;
+            vertical-align: top;
+            word-wrap: break-word; 
+            border-bottom: 1px solid var(--color-border);
+        }
+        #summary-table th {
+            background-color: #f8fafc; /* Fundo do cabeçalho */
+            font-weight: 600;
+            font-size: 0.8em;
+            color: var(--color-text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Remove borda da última linha */
+        #summary-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Zebra striping (para linhas sem cor de componente) */
+        #summary-table tbody tr:nth-child(even) td {
+             background-color: #fcfdff;
+        }
+
+        #summary-table td:nth-child(1) { /* Célula do Componente */
+            font-weight: 500;
+        }
+        #summary-table td:nth-child(2) { /* Célula do Item */
+            font-weight: 600;
+            white-space: nowrap;
+            text-align: center;
+        }
+        #summary-table td:nth-child(4) { /* Célula da Pontuação */
+            white-space: nowrap;
+            text-align: left;
+        }
+        
+        /* Classes de cores para a célula do componente (sobrescreve o zebra striping) */
+        .comp-1 { background-color: var(--color-component-1) !important; }
+        .comp-2 { background-color: var(--color-component-2) !important; }
+        .comp-3 { background-color: var(--color-component-3) !important; }
+        .comp-4 { background-color: var(--color-component-4) !important; }
+        .comp-5 { background-color: var(--color-component-5) !important; }
+        /* --- Fim do CSS da Tabela-Resumo --- */
+
+        /* --- Contêiner e Botão de Download --- */
+        .download-container {
+            text-align: center;
+            margin-top: 30px;
+            padding-bottom: 20px;
+        }
+        #download-btn {
+            background-color: var(--color-accent);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, box-shadow 0.2s;
+        }
+        #download-btn:hover {
+            background-color: var(--color-accent-hover);
+            box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);
+        }
+        /* --- Fim do CSS do Botão --- */
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--color-border);
+            font-size: 0.8em;
+            color: var(--color-text-secondary);
+        }
+
+        /* Media query para telas menores */
+        @media (max-width: 768px) {
+            .page-header {
+                flex-direction: column; 
+                align-items: center; 
+            }
+            .page-header h1 {
+                text-align: center;
+                font-size: 1.3em;
+            }
+            #summary-table {
+                font-size: 0.8em;
+                table-layout: auto; 
+            }
+            #summary-table th, #summary-table td {
+                padding: 6px;
+            }
+            #summary-table th:nth-child(1),
+            #summary-table th:nth-child(2),
+            #summary-table th:nth-child(3),
+            #summary-table th:nth-child(4),
+            #summary-table th:nth-child(5) { width: auto; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header class="page-header">
+            <!-- Logo inserido aqui (caminho corrigido para o novo upload) --><img id="page-logo" src="image_8e8efb.png" alt="Logo" class="page-logo-img">
+            
+            <!-- Título atualizado (removido "Exemplo") --><h1>Quadro 1 - Questionário de Avaliação dos Controles Internos (QACI) em Nível de Entidade</h1>
+        </header>
+
+        <form>
+            <fieldset class="header-form">
+                <legend style="font-weight: bold; padding: 0 5px;">Identificação</legend>
+                <div>
+                    <label for="entidade">Entidade: município/órgão/entidade</label>
+                    <input type="text" id="entidade" name="entidade">
+                </div>
+                <div>
+                    <label for="area">Área organizacional: diretoria/gerência</label>
+                    <input type="text" id="area" name="area">
+                </div>
+                <div>
+                    <label for="gestor">Gestor(a):</label>
+                    <input type="text" id="gestor" name="gestor">
+                </div>
+                <!-- NOVO CAMPO ADICIONADO --><div>
+                    <label for="email">E-mail corporativo:</label>
+                    <input type="text" id="email" name="email">
+                </div>
+            </fieldset>
+
+            <!-- SEÇÃO 1: AMBIENTE DE CONTROLE --><section>
+                <div class="component-header" id="comp1">
+                    <h2>Componente: Ambiente de Controle Interno (Governança e Cultura)</h2>
+                    <p>Conceito: Dá o tom (ritmo) da entidade; influencia a consciência de controle das pessoas e fornece a disciplina e a estrutura.</p>
+                </div>
+
+                <div class="principle-header">1. Princípio: A entidade demonstra ter comprometimento com a integridade e os valores éticos.</div>
+                <details>
+                    <summary><strong>1.1</strong> A alta administração instituiu Código de Ética ou Código de Conduta próprio ou complementa com um Código de Ética Profissional do Servidor Público ou outras políticas tratando de referenciais éticos relacionados às suas atividades específicas?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-1-1">Escala do QACI:</label>
+                        <select name="escala-1-1" id="escala-1-1">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-1-1">Evidências e análises (comentários):</label>
+                        <textarea name="analise-1-1" id="analise-1-1" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>1.2</strong> Existem processos e respectivos procedimentos para avaliar o desempenho das pessoas e das equipes em relação às normas de conduta da entidade?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-1-2">Escala do QACI:</label>
+                        <select name="escala-1-2" id="escala-1-2">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-1-2">Evidências e análises (comentários):</label>
+                        <textarea name="analise-1-2" id="analise-1-2" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>1.3</strong> A entidade realiza periodicamente treinamentos focados em temas relacionados à integridade e valores éticos?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-1-3">Escala do QACI:</label>
+                        <select name="escala-1-3" id="escala-1-3">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-1-3">Evidências e análises (comentários):</label>
+                        <textarea name="analise-1-3" id="analise-1-3" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>1.4</strong> Foi criada comissão de ética na entidade para avaliar os desvios em relação às normas de conduta da entidade?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-1-4">Escala do QACI:</label>
+                        <select name="escala-1-4" id="escala-1-4">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-1-4">Evidências e análises (comentários):</label>
+                        <textarea name="analise-1-4" id="analise-1-4" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>1.5</strong> Há canais de ouvidoria formalmente estabelecidos e divulgados para o recebimento de denúncias, com proteção à identidade do denunciante, a ser mantida sob reserva, se este assim o desejar?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-1-5">Escala do QACI:</label>
+                        <select name="escala-1-5" id="escala-1-5">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-1-5">Evidências e análises (comentários):</label>
+                        <textarea name="analise-1-5" id="analise-1-5" rows="4"></textarea>
+                    </div>
+                </details>
+
+                <div class="principle-header">2. Princípio: A estrutura de governança demonstra independência em relação aos seus executivos e supervisiona o desenvolvimento e o desempenho do controle interno.</div>
+                <details>
+                    <summary><strong>2.1</strong> Existe uma instância (comitê) de governança formalmente definida e que atua de forma independente em relação à administração?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-2-1">Escala do QACI:</label>
+                        <select name="escala-2-1" id="escala-2-1">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-2-1">Evidências e análises (comentários):</label>
+                        <textarea name="analise-2-1" id="analise-2-1" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>2.2</strong> A instância (comitê) de governança supervisiona o desenvolvimento e o desempenho do controle interno?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-2-2">Escala do QACI:</label>
+                        <select name="escala-2-2" id="escala-2-2">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-2-2">Evidências e análises (comentários):</label>
+                        <textarea name="analise-2-2" id="analise-2-2" rows="4"></textarea>
+                    </div>
+                </details>
+
+                <div class="principle-header">3. Princípio: A administração estabelece (com a supervisão da instância de governança caso existente) as estruturas, os níveis de subordinação e as autoridades e responsabilidades adequadas na busca dos objetivos.</div>
+                <details>
+                    <summary><strong>3.1</strong> A estrutura organizacional está formalmente estabelecida em organograma, complementado por um manual da entidade ou por outros normativos (decretos, instruções normativas, portarias, etc.) que estabelecem as competências, atribuições e responsabilidades das áreas e dos cargos efetivos e comissionados?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-3-1">Escala do QACI:</label>
+                        <select name="escala-3-1" id="escala-3-1">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-3-1">Evidências e análises (comentários):</label>
+                        <textarea name="analise-3-1" id="analise-3-1" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>3.2</strong> As competências são adequadamente atribuídas e responsabilidades são apropriadamente delegadas e comunicadas em todos os níveis da entidade, juntamente com os procedimentos operacionais para monitorar resultados?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-3-2">Escala do QACI:</label>
+                        <select name="escala-3-2" id="escala-3-2">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-3-2">Evidências e análises (comentários):</label>
+                        <textarea name="analise-3-2" id="analise-3-2" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>3.3</strong> A entidade dispõe da atividade de auditoria interna governamental em sua estrutura organizacional?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-3-3">Escala do QACI:</label>
+                        <select name="escala-3-3" id="escala-3-3">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-3-3">Evidências e análises (comentários):</label>
+                        <textarea name="analise-3-3" id="analise-3-3" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>3.4</strong> Os servidores e os gestores da entidade conhecem as diferenças conceituais entre sistema de controle interno do município, controles internos de gestão, auditoria interna, órgão central de controle interno, de forma a não atribuir atividades de cogestão à auditoria interna/órgão central de controle interno?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-3-4">Escala do QACI:</label>
+                        <select name="escala-3-4" id="escala-3-4">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-3-4">Evidências e análises (comentários):</label>
+                        <textarea name="analise-3-4" id="analise-3-4" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>3.5</strong> É adotado método de seleção amostral (estatístico ou não estatístico) na determinação da amostra a ser verificada pela auditoria interna/órgão central de controle interno?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-3-5">Escala do QACI:</label>
+                        <select name="escala-3-5" id="escala-3-5">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-3-5">Evidências e análises (comentários):</label>
+                        <textarea name="analise-3-5" id="analise-3-5" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>3.6</strong> Existe uma área que monitora, por meio de rotinas automatizadas de cruzamento de dados e trilhas de auditoria, as aquisições por natureza de despesa, por tipo de produto, por modalidade ou por elementos de despesa nos grupos e subgrupos de forma que possam inibir eventuais fracionamentos de licitação?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-3-6">Escala do QACI:</label>
+                        <select name="escala-3-6" id="escala-3-6">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-3-6">Evidências e análises (comentários):</label>
+                        <textarea name="analise-3-6" id="analise-3-6" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>3.7</strong> Existe orientação formal junto aos gestores sobre a correta previsão e realização da despesa (empenho, liquidação e pagamento) nas subfunções e subelementos adequados?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-3-7">Escala do QACI:</label>
+                        <select name="escala-3-7" id="escala-3-7">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-3-7">Evidências e análises (comentários):</label>
+                        <textarea name="analise-3-7" id="analise-3-7" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>3.8</strong> Existe pesquisa de clima organizacional realizada anualmente no âmbito da entidade ou do município?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-3-8">Escala do QACI:</label>
+                        <select name="escala-3-8" id="escala-3-8">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-3-8">Evidências e análises (comentários):</label>
+                        <textarea name="analise-3-8" id="analise-3-8" rows="4"></textarea>
+                    </div>
+                </details>
+
+                <div class="principle-header">4. Princípio: A entidade demonstra comprometimento para atrair, desenvolver e reter talentos competentes, em linha com seus objetivos.</div>
+                <details>
+                    <summary><strong>4.1</strong> A entidade formaliza políticas, processos e respectivos procedimentos, estabelecendo boas práticas para selecionar, desenvolver e reter talentos?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-4-1">Escala do QACI:</label>
+                        <select name="escala-4-1" id="escala-4-1">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-4-1">Evidências e análises (comentários):</label>
+                        <textarea name="analise-4-1" id="analise-4-1" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>4.2</strong> A entidade adota processo sistemático de gestão e desenvolvimento de competências?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-4-2">Escala do QACI:</label>
+                        <select name="escala-4-2" id="escala-4-2">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-4-2">Evidências e análises (comentários):</label>
+                        <textarea name="analise-4-2" id="analise-4-2" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>4.3</strong> Um programa de capacitação e treinamento regular e sistemático é adotado pela entidade?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-4-3">Escala do QACI:</label>
+                        <select name="escala-4-3" id="escala-4-3">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-4-3">Evidências e análises (comentários):</label>
+                        <textarea name="analise-4-3" id="analise-4-3" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>4.4</strong> A entidade realiza Avaliação Periódica de Desempenho com todos os servidores? (art. 41, inciso III, CF/1988)</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-4-4">Escala do QACI:</label>
+                        <select name="escala-4-4" id="escala-4-4">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-4-4">Evidências e análises (comentários):</label>
+                        <textarea name="analise-4-4" id="analise-4-4" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>4.5</strong> A entidade realiza Avaliação Especial de Desempenho com todos os servidores que estão no estágio probatório (Previsto pela art. 41, inciso III, § 4º da CF/1988)?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-4-5">Escala do QACI:</label>
+                        <select name="escala-4-5" id="escala-4-5">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-4-5">Evidências e análises (comentários):</label>
+                        <textarea name="analise-4-5" id="analise-4-5" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>4.6</strong> A baixa produtividade, baixo desempenho ou baixo comprometimento de servidores é alvo de ações corretivas por parte das chefias e estão previstas nas políticas, processos e respectivos procedimentos de avaliação de desempenho?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-4-6">Escala do QACI:</label>
+                        <select name="escala-4-6" id="escala-4-6">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-4-6">Evidências e análises (comentários):</label>
+                        <textarea name="analise-4-6" id="analise-4-6" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>4.7</strong> Há regulamentação de Plano de Cargos, Carreira e Remuneração para o controle interno? (CF/88, art. 39, caput)</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-4-7">Escala do QACI:</label>
+                        <select name="escala-4-7" id="escala-4-7">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-4-7">Evidências e análises (comentários):</label>
+                        <textarea name="analise-4-7" id="analise-4-7" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>4.8</strong> Há regulamentação, por meio da Lei do Plano de Cargos, Carreira e Remuneração, de adicional de qualificação, para a carreira de controle interno?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-4-8">Escala do QACI:</label>
+                        <select name="escala-4-8" id="escala-4-8">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-4-8">Evidências e análises (comentários):</label>
+                        <textarea name="analise-4-8" id="analise-4-8" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>4.9</strong> Existe uma política de reposição de servidores que se aposentam e/ou política de retenção de servidores que passam em outro concurso?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-4-9">Escala do QACI:</label>
+                        <select name="escala-4-9" id="escala-4-9">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-4-9">Evidências e análises (comentários):</label>
+                        <textarea name="analise-4-9" id="analise-4-9" rows="4"></textarea>
+                    </div>
+                </details>
+
+                <div class="principle-header">5. Princípio: A entidade faz com que as pessoas assumam responsabilidade por suas funções de controle interno na busca pelos objetivos.</div>
+                <details>
+                    <summary><strong>5.1</strong> Há mecanismos para comunicar as responsabilidades pelo controle interno a ser adotado pelos gestores e pela obrigatoriedade de prestar contas?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-5-1">Escala do QACI:</label>
+                        <select name="escala-5-1" id="escala-5-1">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-5-1">Evidências e análises (comentários):</label>
+                        <textarea name="analise-5-1" id="analise-5-1" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>5.2</strong> A administração estabelece métricas, incentivos e outras recompensas aos colaboradores em razão do desempenho da entidade aplicáveis às responsabilidades em todos os níveis da entidade?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-5-2">Escala do QACI:</label>
+                        <select name="escala-5-2" id="escala-5-2">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-5-2">Evidências e análises (comentários):</label>
+                        <textarea name="analise-5-2" id="analise-5-2" rows="4"></textarea>
+                    </div>
+                </details>
+            </section>
+
+            <!-- SEÇÃO 2: AVALIAÇÃO DE RISCOS --><section>
+                <div class="component-header" id="comp2">
+                    <h2>Componente: Avaliação de Riscos</h2>
+                    <p>Conceito: Envolve um processo dinâmico e iterativo para identificar e avaliar os riscos à realização dos objetivos; estabelece a base para determinar a maneira como os riscos serão gerenciados.</p>
+                </div>
+
+                <div class="principle-header">6. Princípio: A entidade especifica os objetivos com clareza suficiente, a fim de permitir a identificação e a avaliação dos riscos associados aos objetivos.</div>
+                <details>
+                    <summary><strong>6.1</strong> A entidade adota um processo formal e sistemático de planejamento e gestão estratégica para estabelecer e gerenciar os objetivos estratégicos, incluindo a missão, a visão, os valores e compromissos da entidade?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-6-1">Escala do QACI:</label>
+                        <select name="escala-6-1" id="escala-6-1">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-6-1">Evidências e análises (comentários):</label>
+                        <textarea name="analise-6-1" id="analise-6-1" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>6.2</strong> A entidade desdobra os objetivos estratégicos em planos tático e operacional até se chegar aos objetivos no nível de atividades (divisões, processos e operações)?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-6-2">Escala do QACI:</label>
+                        <select name="escala-6-2" id="escala-6-2">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-6-2">Evidências e análises (comentários):</label>
+                        <textarea name="analise-6-2" id="analise-6-2" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>6.3</strong> Juntamente com a definição de objetivos, são estabelecidos padrões (indicadores, metas, resultados esperados e afins) para medir o progresso, a qualidade e o desempenho desejado das ações da entidade?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-6-3">Escala do QACI:</label>
+                        <select name="escala-6-3" id="escala-6-3">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-6-3">Evidências e análises (comentários):</label>
+                        <textarea name="analise-6-3" id="analise-6-3" rows="4"></textarea>
+                    </div>
+                </details>
+
+                <div class="principle-header">7. Princípio: A entidade identifica os riscos à realização de seus objetivos por toda a entidade e analisa os riscos como uma base para determinar a forma como devem ser gerenciados.</div>
+                <details>
+                    <summary><strong>7.1</strong> A entidade dispõe de uma Política de Gestão de Riscos?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-7-1">Escala do QACI:</label>
+                        <select name="escala-7-1" id="escala-7-1">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-7-1">Evidências e análises (comentários):</label>
+                        <textarea name="analise-7-1" id="analise-7-1" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>7.2</strong> A Política de Gestão de Riscos é avaliada periodicamente pelo OCCI?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-7-2">Escala do QACI:</label>
+                        <select name="escala-7-2" id="escala-7-2">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-7-2">Evidências e análises (comentários):</label>
+                        <textarea name="analise-7-2" id="analise-7-2" rows="4"></textarea>
+                    </div>
+                </details>
+
+                <div class="principle-header">8. Princípio: A entidade considera o potencial para fraude na avaliação dos riscos à realização dos objetivos.</div>
+                <details>
+                    <summary><strong>8.1</strong> Os riscos de fraudes e corrupção que afetam diretamente a capacidade da entidade de realizar seus objetivos são formalmente identificados, analisados, avaliados e tratados pela entidade por meio de matriz de riscos, por exemplo?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-8-1">Escala do QACI:</label>
+                        <select name="escala-8-1" id="escala-8-1">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-8-1">Evidências e análises (comentários):</label>
+                        <textarea name="analise-8-1" id="analise-8-1" rows="4"></textarea>
+                    </div>
+                </details>
+
+                <div class="principle-header">9. Princípio: A entidade identifica e avalia mudanças que poderiam afetar, de forma significativa, o sistema de controle interno.</div>
+                <details>
+                    <summary><strong>9.1</strong> A entidade avalia formalmente a gestão de riscos estabelecida de modo a mantê-la atualizada em razão de mudanças significativas?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-9-1">Escala do QACI:</label>
+                        <select name="escala-9-1" id="escala-9-1">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-9-1">Evidências e análises (comentários):</label>
+                        <textarea name="analise-9-1" id="analise-9-1" rows="4"></textarea>
+                    </div>
+                </details>
+            </section>
+            
+            <!-- SEÇÃO 3: ATIVIDADES DE CONTROLE --><section>
+                <div class="component-header" id="comp3">
+                    <h2>Componente: Atividades de Controle ou Procedimentos de Controle</h2>
+                    <p>Conceito: Políticas e procedimentos que contribuem para assegurar que os objetivos estão sendo alcançados; as diretrizes administrativas estão sendo cumpridas e que estão sendo realizadas as ações necessárias para gerenciar os riscos.</p>
+                </div>
+
+                <div class="principle-header">10. Princípio: A entidade seleciona e desenvolve atividades de controle que contribuem para a redução, a níveis aceitáveis, dos riscos à realização dos objetivos.</div>
+                <details>
+                    <summary><strong>10.1</strong> As atividades de controle adotadas pela entidade são abrangentes (em todos os níveis da entidade) e razoáveis, relacionando-se diretamente com seus objetivos e riscos?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-10-1">Escala do QACI:</label>
+                        <select name="escala-10-1" id="escala-10-1">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-10-1">Evidências e análises (comentários):</label>
+                        <textarea name="analise-10-1" id="analise-10-1" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>10.2</strong> Atribuições ou responsabilidades por atividades-chave da entidade (autorização, execução, ateste/aprovação, alçadas, registro e revisão) são devidamente segregadas entre diferentes pessoas (colaboradores)?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-10-2">Escala do QACI:</label>
+                        <select name="escala-10-2" id="escala-10-2">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório</option>
+                            <option value="5">5 - Adequado</option>
+                        </select>
+                        <label for="analise-10-2">Evidências e análises (comentários):</label>
+                        <textarea name="analise-10-2" id="analise-10-2" rows="4"></textarea>
+                    </div>
+                </details>
+                <details>
+                    <summary><strong>10.3</strong> Existem relatórios gerenciais sobre o acompanhamento e a consecução de objetivos e metas (quantitativo previsto e realizado) elaborados para a alta direção e encaminhados, no que lhes diz respeito, para os demais gestores?</summary>
+                    <div class="accordion-panel">
+                        <label for="escala-10-3">Escala do QACI:</label>
+                        <select name="escala-10-3" id="escala-10-3">
+                            <option value="">Selecione...</option>
+                            <option value="1">1 - Inadequado</option>
+                            <option value="2">2 - Deficiente</option>
+                            <option value="3">3 - Insatisfatório</option>
+                            <option value="4">4 - Satisfatório
+
